@@ -93,13 +93,11 @@ There are no tests for this challenge. Determine if the app works properly by us
 ## Extension
 1. Have the board check for three-in-a-row. See if you can utilize other [hooks](https://react.dev/reference/react).
 
-2. Write some ES6. Webpack is converting all ES6 to ES5 so browser support is NOT an issue!
-
 2. Refactor your tic-tac-toe game using the [Component API](https://react.dev/reference/react/Component) and make all components class-based rather than functional.
 
-4.  Make your game turn-based, i.e. it'll acknowledge X's turn and O's turn. Instead of just toggling between X and O, have the first click turn the box to an X, the second click turn its box to an O, etc. This will create a more fluid UX.
+3.  Make your game turn-based, i.e. it'll acknowledge X's turn and O's turn. Instead of just toggling between X and O, have the first click turn the box to an X, the second click turn its box to an O, etc. This will create a more fluid UX.
 
-5. Create a new branch on your copy of the calendar skillbuilder the previous unit, and refactor your calendar using React.
+4. Create a new branch on your copy of the calendar skillbuilder the previous unit, and refactor your calendar using React.
 
 ## React Overview
 
