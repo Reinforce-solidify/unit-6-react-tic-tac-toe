@@ -3,22 +3,20 @@
 ## Summary
 For this challenge we'll build a [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe) game. This will require some more advanced use of ReactJS and its features.
 
-**There is a better way to create React elements.** Rather than calling `React.createElement` a bunch of times, most React developers use something called [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html). This is a *JavaScript syntax extension* that looks very similar to plain HTML. For example, without JSX we would need to do this:
+**There is a better way to create React elements.** Rather than calling `React.createElement` a bunch of times, most React developers use something called [JSX](https://react.dev/learn/writing-markup-with-jsx). This is a *JavaScript syntax extension* that looks very similar to plain HTML. For example, without JSX we would need to do this:
 ```javascript
-render: function() {
+() => {
   const button = React.createElement('button', { className: 'btn' }, ['New ', 'Colors!']);
   return React.createElement('div', { id: 'board' }, button);
 }
 ```
 Using JSX, we can instead do this:
 ```javascript
-render() {
-  return (
-    <div id="board">
-      <button className="btn">New Colors!</button>
-    </div>
-  );
-}
+return (
+  <div id="board">
+    <button className="btn">New Colors!</button>
+  </div>
+);
 ```
 This looks like the HTML we know and love. It's much more readable and intuitive. JSX is not able to be read directly in the browser. It needs to be converted, or **compiled**, into plain JavaScript. To do this we'll use Webpack.
 
@@ -33,7 +31,7 @@ This looks like the HTML we know and love. It's much more readable and intuitive
 ### Webpack
 ![webpack](./docs/assets/images/webpack.jpeg)
 
-[Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles. One of the main jobs we are using Webpack for is compiling all our JavaScript files into one; that way, we only load that one file into our html page. Webpack can do a lot more than this though: we're using it to take React Components, which are written in [JSX Syntax](https://facebook.github.io/jsx/) and convert it into regular JavaScript. We do this via these things called loaders.
+[Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles. One of the main jobs we are using Webpack for is compiling all our JavaScript files into one; that way, we only load that one file into our html page. Webpack can do a lot more than this though: we're using it to take React Components, which are written in [JSX Syntax](https://react.dev/learn/writing-markup-with-jsx) and convert it into regular JavaScript. We do this via these things called loaders.
 
 Ultimately, these are good processes to start to understand now. However, if you are struggling with these concepts right now don't worry too much. You will have a unit on the build process where you will learn more about Webpack and other build tools later in the program.
 
@@ -93,11 +91,11 @@ npm start
 There are no tests for this challenge. Determine if the app works properly by using it.
 
 ## Extension
-1. Have the board check for three-in-a-row. See if you can utilize other [lifecycle methods](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class).
+1. Have the board check for three-in-a-row. See if you can utilize other [hooks](https://react.dev/reference/react).
 
 2. Write some ES6. Webpack is converting all ES6 to ES5 so browser support is NOT an issue!
 
-3. Refactor your tic-tac-toe game using [React Hooks](https://reactjs.org/docs/hooks-intro.html) and make all components functional rather than class-based.
+2. Refactor your tic-tac-toe game using the [Component API](https://react.dev/reference/react/Component) and make all components class-based rather than functional.
 
 4.  Make your game turn-based, i.e. it'll acknowledge X's turn and O's turn. Instead of just toggling between X and O, have the first click turn the box to an X, the second click turn its box to an O, etc. This will create a more fluid UX.
 
