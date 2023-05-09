@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Tic Tac Toe</h1>
-      </div>
-    );
-  }
+const App = () => {
+  console.log('sldkfjskldj')
+  return (
+    <div>
+      <h1>Tic Tac Toe</h1>
+      adsfjkalskdfjalksdjfalksdjf
+    </div>
+  );
 }
 
-render(<App />, document.querySelector('#root'));
+const root = createRoot(document.querySelector('#root'));
+root.render(<App />,);
