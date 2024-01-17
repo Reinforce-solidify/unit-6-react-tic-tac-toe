@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
+const Box = ({ text }) => {
+  return (
+    <div style={{ width: '100px', height: '100px', border: '1px solid black', textAlign: 'center', lineHeight: '100px' }}>
+      {text}
+    </div>
+  );
+};
+
 const App = () => {
   return (
     <div>
