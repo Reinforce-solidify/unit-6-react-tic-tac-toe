@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 
-const Box = ({ text }) => {
+const Box = () => {
+  const [text, setText] = useState('-');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setText(prevText => prevText === 'X' ? 'O' : 'X')
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
-    <div style={{ width: '100px', height: '100px', border: '1px solid black', textAlign: 'center', lineHeight: '100px' }}>
+    <button style={{ width: '100px', height: '100px' }}>
       {text}
-    </div>
+    </button>
   );
 };
 
@@ -13,9 +23,12 @@ const App = () => {
   return (
     <div>
       <h1>Tic Tac Toe</h1>
+      <Box />
     </div>
   );
 }
 
 const root = createRoot(document.querySelector('#root'));
 root.render(<App />,);
+
+
