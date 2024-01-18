@@ -4,16 +4,12 @@ import { createRoot } from 'react-dom/client';
 const Box = () => {
   const [text, setText] = useState('-');
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setText(prevText => prevText === 'X' ? 'O' : 'X')
-    }, 300);
+  const handleClick = () => {
+    setText(prevText => prevText === 'X' ? 'O' : 'X')
+  }
 
-    return () => clearInterval(interval);
-  }, []);
-  
   return (
-    <button style={{ width: '100px', height: '100px' }}>
+    <button onClick={handleClick} style={{ width: '100px', height: '100px' }}>
       {text}
     </button>
   );
