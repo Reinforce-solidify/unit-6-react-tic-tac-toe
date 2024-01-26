@@ -9,9 +9,7 @@ const Box = () => {
   }
 
   return (
-    <button onClick={handleClick} style={{ width: '100px', height: '100px' }}>
-      {text}
-    </button>
+    <button onClick={handleClick} style={{ width: '100px', height: '100px' }}>{text}</button>
   );
 };
 
