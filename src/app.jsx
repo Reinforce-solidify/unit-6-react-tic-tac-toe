@@ -5,8 +5,8 @@ const Box = () => {
   const [text, setText] = useState('-');
 
   const handleClick = () => {
-    setText(prevText => prevText === 'X' ? 'O' : 'X')
-  }
+    setText(prevText => prevText === 'X' ? 'O' : 'X');
+  };
 
   return (
     <button onClick={handleClick} style={{ width: '100px', height: '100px' }}>{text}</button>
@@ -23,6 +23,6 @@ const App = () => {
 }
 
 const root = createRoot(document.querySelector('#root'));
-root.render(<App />,);
+root.render(<App />);
 
 
